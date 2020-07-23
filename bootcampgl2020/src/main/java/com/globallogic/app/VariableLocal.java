@@ -2,12 +2,11 @@ package com.globallogic.app;
 
 public class VariableLocal {
 	public static void main(String[] args) {
-		int age = 0;
-		int b = 5;
-		
+			
+		int c = 15;
 		StudentDetails estudiante = new StudentDetails();
-		estudiante.studentAge(age, b);
-		
+		estudiante.studentAge(c);
+			
 		
 	}
 
