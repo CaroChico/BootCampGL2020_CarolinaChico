@@ -4,12 +4,17 @@ public class ControlFlujosForEach {
 
 	public static void main(String[] args) {
 
-		int[] num = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//		int[] numeros = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//
+//		for (int num : numeros) {
+//			System.out.println("Valor iterado: " + num);
+//		}
 
-		 		
-		for (int i = 0; i < 10; i++) {
-			
-		System.out.println("Valor iterado: " + num [i]);
+		String[] diasSemana = {"Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo" };
+
+		for (String dia : diasSemana) {
+
+			System.out.println("Dia de la semana: " + dia);
 		}
 
 	}
