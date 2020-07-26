@@ -10,13 +10,20 @@ public class ControlFlujosForEach {
 //			System.out.println("Valor iterado: " + num);
 //		}
 
-		String[] diasSemana = {"Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo" };
+//		String[] diasSemana = {"Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo" };
+//
+//		for (String dia : diasSemana) {
+//
+//			System.out.println("Dia de la semana: " + dia);
+//		}
+//
+//	}
 
-		for (String dia : diasSemana) {
+		String nombre = "BootCamp 2020";
+			
+		for (char letra : nombre.toCharArray()) {
 
-			System.out.println("Dia de la semana: " + dia);
+			System.out.println("Letra: " + letra);
 		}
-
 	}
-
 }
