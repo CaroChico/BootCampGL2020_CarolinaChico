@@ -26,6 +26,8 @@ public class ControlFlujoFor {
 		
 		+++++++++++++++++++++++++
 		
+		*/
+		
 		
 		String [] diasSemana = {"Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"};
 		
@@ -33,10 +35,6 @@ public class ControlFlujoFor {
 			
 			System.out.println("Dia de la semana: " + diasSemana[i]);
 		}
-		
-		+++++++++++++++++++++++++
-		
-		*/
 		
 		
 	}
