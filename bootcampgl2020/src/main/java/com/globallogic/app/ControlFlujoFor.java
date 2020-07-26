@@ -8,9 +8,10 @@ public class ControlFlujoFor {
 			
 			System.out.println("Valor iterado: " + i);
 		}
-*/
+
 		int contador = 0;
 		
+		+++++++++++++++++++++++++
 		
 		for (int i = 0; i <= 10000; i++) {
 			
@@ -22,6 +23,22 @@ public class ControlFlujoFor {
 		}
 		
 		System.out.println("Valor del contador: " + contador);
+		
+		+++++++++++++++++++++++++
+		
+		
+		String [] diasSemana = {"Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"};
+		
+		for (int i = 0; i < 7; i++) {
+			
+			System.out.println("Dia de la semana: " + diasSemana[i]);
+		}
+		
+		+++++++++++++++++++++++++
+		
+		*/
+		
+		
 	}
 
 }
