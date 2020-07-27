@@ -1,5 +1,8 @@
 package com.globallogic.app;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Poo {
 
 	public static void main(String[] args) {
@@ -25,6 +28,22 @@ public class Poo {
 		h1.guardarElemento("Queso");
 		h1.encender();
 		h1.apagar();
+		
+		Televisor t1 = new Televisor();
+		
+		Cafetera c1 = new Cafetera();
+		
+		List<Electrodomestico> listaE = new ArrayList<Electrodomestico>();
+		listaE.add(h1);
+		listaE.add(t1);
+		listaE.add(c1);
+		
+		
+	for (Electrodomestico e : listaE) {
+		
+		e.encender();
+	}
+		
 	}
 
 }
