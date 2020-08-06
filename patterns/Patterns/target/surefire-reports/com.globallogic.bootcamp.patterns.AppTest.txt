@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.globallogic.bootcamp.patterns.AppTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.026 s <<< FAILURE! - in com.globallogic.bootcamp.patterns.AppTest
+test  Time elapsed: 0.023 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The type java.util.function.Supplier cannot be resolved. It is indirectly referenced from required .class files
+
+	at com.globallogic.bootcamp.patterns.AppTest.<init>(AppTest.java:1)
+
