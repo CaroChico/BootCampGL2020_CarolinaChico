@@ -1,8 +1,6 @@
 package com.globallogic.bootcamp.patterns;
 
-import static org.junit.Assert.*;
-
-import java.util.Currency;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 

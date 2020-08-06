@@ -8,6 +8,7 @@ public class Order {
 	private String count;
 	private Currency currency;
 
+
 	public Order() {
 		currency = Currency.getInstance(NAME);
 
@@ -16,5 +17,6 @@ public class Order {
 	public Currency getCurrency() {
 		return currency;
 	}
-
+	
+	
 }
