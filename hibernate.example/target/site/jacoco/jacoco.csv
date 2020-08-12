@@ -1,0 +1,9 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+hibernate.example,hibernate.example.entity,Menu,0,57,0,0,0,17,0,9,0,9
+hibernate.example,hibernate.example.entity,Alumno,57,0,0,0,17,0,9,0,9,0
+hibernate.example,hibernate.example.dao,AlumnoDao,239,0,46,0,38,0,29,0,6,0
+hibernate.example,hibernate.example.dao,MenuDao,243,0,46,0,41,0,29,0,6,0
+hibernate.example,hibernate.example.config,HibernateConfigMenu,67,0,2,0,18,0,4,0,3,0
+hibernate.example,hibernate.example.config,HibernateConfig,67,0,2,0,18,0,4,0,3,0
+hibernate.example,hibernate.example,ExampleApplication,52,0,0,0,9,0,2,0,2,0
+hibernate.example,hibernate.example,ExampleApplication2,28,0,0,0,9,0,2,0,2,0

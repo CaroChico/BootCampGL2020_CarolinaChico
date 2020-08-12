@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AlumnoDao.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">hibernate.example</a> &gt; <a href="index.source.html" class="el_package">hibernate.example.dao</a> &gt; <span class="el_source">AlumnoDao.java</span></div><h1>AlumnoDao.java</h1><pre class="source lang-java linenums">package hibernate.example.dao;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import hibernate.example.config.HibernateConfig;
+import hibernate.example.entity.Alumno;
+
+<span class="nc" id="L11">public class AlumnoDao {</span>
+
+	public void createAlumno(Alumno alumno) {
+
+<span class="nc" id="L15">		Transaction transaction = null;</span>
+
+<span class="nc" id="L17">		try (Session session = HibernateConfig.getSessionFactory().openSession()) {</span>
+
+<span class="nc" id="L19">			transaction = session.beginTransaction();</span>
+
+<span class="nc" id="L21">			session.save(alumno);</span>
+
+<span class="nc" id="L23">			transaction.commit();</span>
+
+<span class="nc bnc" id="L25" title="All 8 branches missed.">		} catch (Exception e) {</span>
+
+<span class="nc bnc" id="L27" title="All 2 branches missed.">			if (transaction != null) {</span>
+
+<span class="nc" id="L29">				transaction.rollback();</span>
+
+			}
+
+<span class="nc" id="L33">			e.printStackTrace();</span>
+
+		}
+
+<span class="nc" id="L37">	}</span>
+
+	public List&lt;Alumno&gt; getAlumnos() {
+
+<span class="nc" id="L41">		try (Session session = HibernateConfig.getSessionFactory().openSession()) {</span>
+
+<span class="nc" id="L43">			return session.createQuery(&quot;from Alumno&quot;, Alumno.class).list();</span>
+
+<span class="nc bnc" id="L45" title="All 8 branches missed.">		}</span>
+
+	}
+
+	public List&lt;Alumno&gt; getAlumnos(String nombre, String apellido) {
+
+<span class="nc" id="L51">		try (Session session = HibernateConfig.getSessionFactory().openSession()) {</span>
+
+<span class="nc" id="L53">			return session.createQuery(&quot;from Alumno s where s.nombre=:nombre and s.apellido=:apellido&quot;</span>
+
+<span class="nc" id="L55">					, Alumno.class).setParameter(&quot;nombre&quot;, nombre).setParameter(&quot;apellido&quot;, apellido).list();</span>
+<span class="nc bnc" id="L56" title="All 8 branches missed.">		}</span>
+	}
+
+	public void updateAlumno(Alumno alumno) {
+
+<span class="nc" id="L61">		Transaction transaction = null;</span>
+
+<span class="nc" id="L63">		try (Session session = HibernateConfig.getSessionFactory().openSession()) {</span>
+
+<span class="nc" id="L65">			transaction = session.beginTransaction();</span>
+
+<span class="nc" id="L67">			session.update(alumno);</span>
+
+<span class="nc" id="L69">			transaction.commit();</span>
+
+<span class="nc bnc" id="L71" title="All 8 branches missed.">		} catch (Exception e) {</span>
+
+<span class="nc bnc" id="L73" title="All 2 branches missed.">			if (transaction != null)</span>
+
+<span class="nc" id="L75">				transaction.rollback();</span>
+
+<span class="nc" id="L77">			e.printStackTrace();</span>
+
+		}
+
+<span class="nc" id="L81">	}</span>
+
+	public void removeAlumno(Alumno alumno) {
+
+<span class="nc" id="L85">		Transaction transaction = null;</span>
+
+<span class="nc" id="L87">		try (Session session = HibernateConfig.getSessionFactory().openSession()) {</span>
+
+<span class="nc" id="L89">			transaction = session.beginTransaction();</span>
+
+<span class="nc" id="L91">			session.delete(alumno);</span>
+
+<span class="nc" id="L93">			transaction.commit();</span>
+
+<span class="nc bnc" id="L95" title="All 8 branches missed.">		} catch (Exception e) {</span>
+
+<span class="nc bnc" id="L97" title="All 2 branches missed.">			if (transaction != null)</span>
+
+<span class="nc" id="L99">				transaction.rollback();</span>
+
+<span class="nc" id="L101">			e.printStackTrace();</span>
+
+		}
+<span class="nc" id="L104">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

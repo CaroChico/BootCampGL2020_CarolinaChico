@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ExampleApplication2.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">hibernate.example</a> &gt; <a href="index.source.html" class="el_package">hibernate.example</a> &gt; <span class="el_source">ExampleApplication2.java</span></div><h1>ExampleApplication2.java</h1><pre class="source lang-java linenums">package hibernate.example;
+
+import hibernate.example.dao.MenuDao;
+import hibernate.example.entity.Menu;
+
+<span class="nc" id="L6">public class ExampleApplication2 {</span>
+
+	public static void main(String[] args) {
+
+<span class="nc" id="L10">		MenuDao menuDao = new MenuDao();</span>
+
+<span class="nc" id="L12">		menuDao.createMenu(new Menu(&quot;Milanesa Clasica&quot;,</span>
+<span class="nc" id="L13">				&quot;una delicada milanesa con crocantes papas fritas finamente seleccionadas&quot;, 500));</span>
+
+<span class="nc" id="L15">		menuDao.createMenu(new Menu(&quot;Lomo al Piedra&quot;,</span>
+<span class="nc" id="L16">				&quot;un curioso plato donde se utilizan piedras calentadas al rojo vivo para cocinar el\r\n&quot;</span>
+						+ &quot;lomo junto a especias orientales y sudamericanas logrando un elixir entre la textura y el sabor&quot;,
+<span class="nc" id="L18">				750));</span>
+
+<span class="nc" id="L20">		System.out.println(menuDao.getMenu());</span>
+<span class="nc" id="L21">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
